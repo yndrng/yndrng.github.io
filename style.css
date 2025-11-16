@@ -47,13 +47,11 @@ table {
 }
 
 body {
-	font: normal normal 400;
-	font-size: 9.5pt;
-	line-height: 1.35em;
-	/*also written as...  font: normal normal 400 100%/1.5em;*/
-	font-family: Avenir,Verdana,sans-serif;
-	/*margin-top: 1em;
-	margin-left: 1em;*/
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12pt; /* required */
+  line-height: 1.4;
+  font-family: "Inter", Arial, sans-serif;
 }
 
 p {
@@ -65,11 +63,21 @@ p {
 }
 
 code {
-	font: normal normal;
-	font-size: 90%;
-	/*line-height: 1em;*/
-	font-family: Monaco,Menlo,monospace,sans-serif;
-	color: #a3be8c;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 0.9em;
+  line-height: 1.2;
+  font-family: Monaco, Menlo, monospace;
+  color: #a3be8c;
+}
+
+/* If you still have something like:
+   gap: min(4vw, 1.5em);
+   overflow-x: auto;
+   replace with: */
+.container {
+  gap: 1.5em;
+  overflow: hidden;
 }
 
 p code {
