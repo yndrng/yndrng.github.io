@@ -16,8 +16,8 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 
 ### Languages
 
-**Python** – Django/DRF, FastAPI, Flask, Serverless.  
-**TypeScript/JavaScript** – React, jQuery.
+**Python** – Django/DRF, FastAPI, Flask, Serverless Framework, etc. - **5+ years of experience.**\
+**TypeScript/JavaScript** – React, jQuery - **1 year of experience.**
 
 ---
 
@@ -35,7 +35,7 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 
 ### Cloud
 
-**AWS** – EC2, ECS Fargate, S3, Lambda, CloudFront, RDS, DynamoDB, SES, SQS, CloudWatch.  
+**AWS** – EC2, ECS Fargate, S3, Lambda, CloudFront, RDS, DynamoDB, SES, SQS, CloudWatch, etc. \
 **DigitalOcean** – Droplets.
 
 ---
