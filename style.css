@@ -1,3 +1,4 @@
+/* --- Reset --- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -6,199 +7,160 @@ small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
 }
-h1 {
-    color: #2e3440;
-    margin-bottom: 5px;
-}
-/* HTML5 display-role reset for older browsers */
+
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  display: block;
 }
 
 body {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12pt; /* required */
-  line-height: 1.4;
+  line-height: 1.5;
+}
+
+/* --- Base layout --- */
+body {
   font-family: "Inter", Arial, sans-serif;
+  font-size: 12pt;
+  color: #111827;
+  background: #f9fafb;
+  max-width: 900px;
+  margin: 40px auto 60px;
+  padding: 0 24px;
 }
 
+/* --- Paragraphs --- */
 p {
-	position: relative;
-	left: 25%;
-	margin-bottom: 0.2em;
-	margin-right: 0;
-	width: 60%;
+  margin: 0 0 0.35em;
 }
 
-code {
-  font-style: normal;
+/* --- Headings --- */
+h1, h2, h3, h4 {
+  font-family: Avenir, Cousine, Verdana, sans-serif;
   font-weight: 400;
-  font-size: 0.9em;
-  line-height: 1.2;
-  font-family: Monaco, Menlo, monospace;
-  color: #a3be8c;
 }
 
-/* If you still have something like:
-   gap: min(4vw, 1.5em);
-   overflow-x: auto;
-   replace with: */
-.container {
-  gap: 1.5em;
-  overflow: hidden;
+/* Name at top */
+h1 {
+  color: #2e3440;
+  font-size: 2.4em;
+  line-height: 1.1;
+  margin-bottom: 0.15em;
 }
 
-p code {
-	position: absolute;
-	text-align: right;
-	right: -20%;
+/* Subtitle under name */
+h1 + p {
+  font-style: italic;
+  font-size: 110%;
+  margin-bottom: 1.2em;
 }
 
+/* Major sections: Employment, Education, etc. */
+h1[id] {
+  margin-top: 1em;
+  /*padding-top: 0.5em;*/
+  /*border-top: 1px solid #e5e7eb;*/
+}
 
+/* Company names */
+h2 {
+  font-size: 1.25em;
+  color: #111827;
+  font-weight: 600;
+  margin: 1.6em 0 0.35em;
+}
+
+/* Subprojects */
+h3 {
+  font-size: 1.1em;
+  color: #4c566a;
+  margin: 1em 0 0.2em;
+}
+
+/* --- Lists --- */
 ul {
-	position: relative;
-	left: 25%;
-	width: 75%;
-	margin-bottom: 1em;
-	/*margin-top: -0.5em;*/
+  list-style: disc;
+  margin: 0.2em 0 0.9em 1.4em;
 }
-
-/*uncomment to get dashes in the list*/
-/*li:before {
-	content: "-";
-	position: relative;
-	left: -0.25em;
-}*/
 
 li {
-	/*second line indent*/
-	padding-left: 1.25em;
-	text-indent: -1.25em;
-	/*color: #777;*/
+  margin-bottom: 0.25em;
 }
 
 li ul {
-	position: relative;
-	left: 0;
-	width: 100%;
-	margin-top: 0.25em;
+  margin-top: 0.25em;
 }
 
-h1,h2,h3,h4 {
-	font-weight: 400;
-	font-family: Avenir,Cousine,Verdana,sans-serif;
-	width: 80%;
+/* --- Horizontal rule (---) --- */
+hr {
+  border: 0;
+  border-top: 1px solid #d1d5db;
+  margin: 1em 0 0.6em;
+  height: 0;
 }
 
-h1 {
-	text-align: left;
-	font-size: 3em;
-	line-height: 1em;
-	position: relative;
-	left: 25%;
-}
-
-h1+p {
-	/*subtitle*/
-	font-style: italic;
-	font-size: 110%;
-}
-
-h2 {
-	font-size: 1.5em;
-	color: #3b4252;
-	margin-top: 2em;
-	position: relative;
-	top: 1.2em;
-	text-align: right;
-	width: 20%;
-}
-
-
-h3 {
-	font-size: 1.1em;
-	line-height: 2em;
-	color: #4c566a;
-	position: relative;
-	top: 1.6em;
-	text-align: right;
-	width: 20%;
-}
-
+/* --- Links --- */
 a {
-	color: #5e81ac;
-	text-decoration:none
+  color: #5e81ac;
+  text-decoration: none;
 }
 
 a:hover {
-	color:#5e81ac
+  text-decoration: underline;
 }
 
+/* PDF link */
+a.document-link {
+  display: inline-block;
+  margin: 0 0 1.4em;
+  color: #5e81ac;
+  font-family: Monaco, Menlo, monospace;
+  font-size: 90%;
+}
+
+/* Contact block */
 #webaddress {
-	margin-top: 1em;
-	position: relative;
-	left: 25%;
-	color: #5e81ac;
-	font-family: Monaco,Menlo,monospace,sans-serif;
-	font-size: 90%;
+  margin: 0 0 1.6em;
+  font-family: Monaco, Menlo, monospace;
+  font-size: 90%;
+}
+
+#webaddress p {
+  margin: 0;
 }
 
 #webaddress a {
-	text-decoration: none;
+  margin-right: 0.75em;
 }
 
-a.document-link {
-    margin-top: 1em;
-    margin-bottom: 2em;
-	position: relative;
-	left: 25%;
-	color: #5e81ac;
-	font-family: Monaco,Menlo,monospace,sans-serif;
-	font-size: 90%;
-    text-decoration: none;
+/* --- Code --- */
+code {
+  font-family: Monaco, Menlo, monospace;
+  font-size: 0.9em;
+  color: #374151;
 }
+
+p code {
+  position: static;
+}
+
+/* --- Emphasis --- */
 em {
-	font-style: normal;
-	color: #2d4e5e
+  color: #2d4e5e;
 }
 
 strong {
-	font-weight: bold;
+  font-weight: bold;
 }
 
+/* Hide GitHub button */
 #ghbutton {
-	display: none;
-	visibility: hidden;
+  display: none;
+  visibility: hidden;
 }

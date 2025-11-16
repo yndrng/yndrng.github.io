@@ -2,45 +2,51 @@
 title: Aliaksandr (Alex/Sasha) Babaren
 ---
 
-Software Engineer / Backend Developer
+*Software Engineer / Backend Developer* living in *Warsaw, Poland*.
 
 <div id="webaddress">
-  <a href="mailto:sasha@klik.music">Email</a>
+  <a href="mailto:sasha@klik.music">Email</a> |
   <a href="https://www.linkedin.com/in/yndrng" target="_blank">LinkedIn</a> |
   <a href="https://github.com/yndrng" target="_blank">GitHub</a>
 </div>
 
-### Summary
-
 Dedicated Software Engineer with extensive experience in designing, developing, and optimizing high-performance backend systems across agriculture, media, healthcare, finance, recruitment, cybersecurity, and real estate. Skilled in Python ecosystems (Django/DRF, FastAPI), cloud infrastructure (AWS, DigitalOcean), asynchronous processing, distributed systems, and data pipelines. Proven ability to lead technical projects, improve system reliability, automate workflows, and streamline infrastructure using IaC practices.
 
-### Location
-
-Warsaw, Poland.
+# R&D Skills
 
 ### Languages
 
 **Python** – Django/DRF, FastAPI, Flask, Serverless.  
 **TypeScript/JavaScript** – React, jQuery.
 
+---
+
 ### Data Access
 
 **SQLite**, **PostgreSQL**, **MySQL/MariaDB**, **MongoDB**, **DynamoDB**, **Redis**, **OpenSearch/Elasticsearch**.
 
+---
+
 ### Brokerages / Messaging
 
-**RabbitMQ**, **AWS SQS**, **Redis** (pub/sub, caching).
+**RabbitMQ**, **AWS SQS**, **Redis**.
+
+---
 
 ### Cloud
 
 **AWS** – EC2, ECS Fargate, S3, Lambda, CloudFront, RDS, DynamoDB, SES, SQS, CloudWatch.  
 **DigitalOcean** – Droplets.
 
+---
+
 ### Infrastructure
 
 **Docker** – production and development containerization.  
 **Terraform** – IaC for AWS and DigitalOcean environments.  
 **GitHub Actions** – CI/CD pipelines for automated testing, builds, and deployments.
+
+---
 
 ### Communication
 
@@ -49,16 +55,14 @@ Warsaw, Poland.
 **Belarusian** – Native.  
 **Polish** – Limited proficiency.
 
-### Interests
-
-<a href="https://klik.music" target="_blank">KLIK.music</a> – online media project focused on Belarusian music.  
-Music overall: vinyl collecting, concerts, guitar, history of music.
-
 ---
 
-## Employment
+### Interests
+Music overall: vinyl collecting, concerts, guitar, history.
 
-### Fermata — Software Engineer  
+# Employment
+
+## Fermata — Software Engineer  
 *AI in Agriculture*  
 **Dec 2024 – ongoing**
 
@@ -74,7 +78,7 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, AWS (S3, CloudFront, Parameter Stor
 
 ---
 
-### <a href="https://klik.music" target="_blank">KLIK</a> — Technical Director / Pet Project 
+## <a href="https://klik.music" target="_blank">KLIK</a> — Technical Director / Pet Project 
 *Online music media*  
 **Feb 2024 – ongoing**
 
@@ -140,8 +144,6 @@ Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, pytest, AWS (RDS, SQS), S
 - Conducted interviews and candidate evaluations.  
 - Assisted engineers with interview preparation.
 
----
-
 ### Pectus Finance — Finance domain  
 *Berlin, Germany*
 
@@ -153,8 +155,6 @@ Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, pytest, AWS (RDS, SQS), S
 
 **Stack:**  
 Python, FastAPI, AWS (Lambda, SAM, API Gateway, SQS, RDS, S3), Serverless Framework, PostgreSQL, SQLAlchemy.
-
----
 
 ### Drax Executive — Recruitment domain  
 *UK*
@@ -168,8 +168,6 @@ Python, FastAPI, AWS (Lambda, SAM, API Gateway, SQS, RDS, S3), Serverless Framew
 
 **Stack:**  
 Python, FastAPI, AWS (Lambda, SQS, API Gateway, RDS, OpenSearch, S3), MySQL, MongoDB, pytest.
-
----
 
 ### NDA Project — Cybersecurity domain  
 
@@ -199,7 +197,10 @@ Python, Django, DRF, MariaDB.
 
 **Stack:**  
 Python, Django, Celery, PostgreSQL, JavaScript, jQuery, Bootstrap, HTML5, CSS3, Mailchimp, pytest, Django templates, React.js.
-`2019-2022`
-__Belarusian State University of Informatics and Radioelectronics__
 
-- **Computer Science and Engineering** at *Faculty of informational technologies and control* (GPA: 3.73 / 4.0})
+# Education
+
+## Belarusian State University of Informatics and Radioelectronics
+**2019-2022**
+
+- **Computer Science and Engineering** at **Faculty of informational technologies and control** (GPA: 3.73 / 4.0)
