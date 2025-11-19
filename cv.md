@@ -205,3 +205,7 @@ Python, Django, Celery, PostgreSQL, JavaScript, jQuery, Bootstrap, HTML5, CSS3, 
 **2019-2022**
 
 - **Computer Science and Engineering** at **Faculty of informational technologies and control** (GPA: 3.73 / 4.0)
+
+---
+
+_I accept the processing of my personal data also for future recruitment, in accordance with Article 6(1)(a) of the GDPR._
