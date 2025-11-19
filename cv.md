@@ -66,6 +66,7 @@ Music overall: vinyl collecting, concerts, guitar, history.
 *AI in Agriculture*  
 **Dec 2024 – ongoing**
 
+- Built a Slack app that automated a key business-critical reporting flow, integrating with the internal report service and enabling teams to generate reports on demand or on schedule.
 - Engineered a secure image delivery pipeline using CDN, improving latency and user experience compared to direct S3 access.  
 - Overhauled a complex legacy client integration: emulated camera input, implemented custom serialization, ensured reliable communication.  
 - Implemented centralized secrets management with AWS SSM Parameter Store, introducing versioned, secure credential handling.  
@@ -74,7 +75,7 @@ Music overall: vinyl collecting, concerts, guitar, history.
 - Refactored filtering system powering core functionality for accurate and efficient querying.
 
 **Stack:**  
-Python, asyncio, MongoDB, RabbitMQ, FastAPI, AWS (S3, CloudFront, Parameter Store, Lambda, EventBridge), pytest, Sentry, Nomad, Portainer.
+Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Parameter Store, Lambda, EventBridge), pytest, Sentry, Nomad, Portainer.
 
 ---
 
