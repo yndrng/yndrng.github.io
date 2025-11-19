@@ -16,7 +16,7 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 
 ### Languages
 
-**Python** – Django/DRF, FastAPI, Flask, Serverless Framework, etc. - **5+ years of experience.**\
+**Python** – Django/DRF, FastAPI, Flask, Serverless Framework, etc. - **5 years of experience.**\
 **TypeScript/JavaScript** – React, jQuery - **1 year of experience.**
 
 ---
@@ -139,7 +139,7 @@ Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, pytest, AWS (RDS, SQS), S
 
 ## Innowise Group — Software Engineer  
 *Minsk, Belarus / Warsaw, Poland*  
-**Jan 2021 – Mar 2023**
+**Jan 2022 – Mar 2023**
 
 - Mentored junior developers.  
 - Conducted interviews and candidate evaluations.  
@@ -186,7 +186,7 @@ Python, Django, DRF, MariaDB.
 
 ## iTechArt Group — Software Engineer  
 *Minsk, Belarus*  
-**Jun 2020 – Dec 2020**
+**Jun 2021 – Dec 2021**
 
 ### Project in Real Estate domain
 
