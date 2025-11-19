@@ -3,7 +3,7 @@
 Compiles the cv.md file into html and pdf formats using pandoc, with the html format containing a link to the PDF file.
 The static index.html can then be served, for instance via GitHub pages.
 
-[You can view my CV online as an example.](https://callumhoughton18.github.io/super-simple-cv/)
+[You can view my CV online as an example.](https://yndrng.github.io/)
 
 ## Quick Start
 
