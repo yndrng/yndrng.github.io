@@ -79,7 +79,7 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Par
 
 ---
 
-## <a href="https://klik.music" target="_blank">KLIK</a> — Technical Director / Pet Project 
+## <a href="https://klik.music" target="_blank">KLIK</a> — Swiss Army Man / Pet Project 
 *Online music media*  
 **Feb 2024 – ongoing**
 
