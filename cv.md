@@ -64,7 +64,7 @@ Music overall: vinyl collecting, concerts, guitar, history.
 
 ## Fermata — Software Engineer  
 *AI in Agriculture*  
-**Dec 2024 – ongoing**
+**Dec 2024 – Dec 2025**
 
 - Built a Slack app that automated a key business-critical reporting flow, integrating with the internal report service and enabling teams to generate reports on demand or on schedule.
 - Engineered a secure image delivery pipeline using CDN, improving latency and user experience compared to direct S3 access.  
@@ -99,7 +99,7 @@ Python, Django, DRF, Django templates, PostgreSQL, Google Sheets, AWS (ECS, RDS,
 
 ---
 
-## Remedy Product Studio — Senior (L5) Software Engineer  
+## Remedy Product Studio — Software Engineer | L5
 *Warsaw, Poland*  
 **Mar 2023 – Nov 2024**
 
@@ -137,7 +137,7 @@ Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, pytest, AWS (RDS, SQS), S
 
 ---
 
-## Innowise Group — Software Engineer  
+## Innowise Group — Middle Software Engineer / Manager
 *Minsk, Belarus / Warsaw, Poland*  
 **Jan 2022 – Mar 2023**
 
@@ -184,7 +184,7 @@ Python, Django, DRF, MariaDB.
 
 ---
 
-## iTechArt Group — Software Engineer  
+## iTechArt Group — Junior Software Engineer  
 *Minsk, Belarus*  
 **Jun 2021 – Dec 2021**
 
