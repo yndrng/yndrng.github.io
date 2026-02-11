@@ -62,6 +62,18 @@ Music overall: vinyl collecting, concerts, guitar, history.
 
 # Employment
 
+## Godel Technologies Europe — Senior Software Engineer  
+*Warsaw, Poland*  
+**Jan 2026 – ongoing**  
+
+### Project in Energy domain
+*Worldwide*
+
+- Take a part of a huge migration project.
+
+**Stack:**
+Python, Django, pytest
+
 ## Fermata — Software Engineer  
 *AI in Agriculture*  
 **Dec 2024 – Dec 2025**
