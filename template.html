@@ -8,8 +8,12 @@
     <title>$title$</title>
   </head>
   <body>
-    <a href="cv.pdf" class="document-link">As PDF</a>
-    <h1>$title$</h1>
+    <nav class="tabs">
+      <a href="cv.html"$if(cvpage)$ class="active"$endif$>CV</a>
+      <a href="gigs.html"$if(gigspage)$ class="active"$endif$>Gigs</a>
+    </nav>
+$if(cvpage)$    <a href="cv.pdf" class="document-link">As PDF</a>
+$endif$    <h1>$title$</h1>
     $body$
   </body>
 </html>
