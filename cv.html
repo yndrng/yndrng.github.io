@@ -117,40 +117,67 @@
     <p><em>Online music media</em><br />
     <strong>Feb 2024 – ongoing</strong></p>
     <ul>
-    <li>Launched the public-facing website with seamless access to
-    artist data.<br />
+    <li>Launched and run the public site end-to-end — a Django REST API
+    plus headless Wagtail CMS serving artists, releases, concerts and
+    editorial content.<br />
     </li>
-    <li>Built Python scrapers for automated ingestion of Spotify and
-    Yandex Music metadata.<br />
+    <li>Designed a three-layer domain model (canonical catalog /
+    per-platform integration / CMS pages) that keeps streaming data,
+    editorial truth and content decoupled.<br />
     </li>
-    <li>Migrated data storage from Google Sheets to a Django REST API
-    backed by PostgreSQL.<br />
+    <li>Built a pluggable platform-adapter layer with declarative
+    capability flags — Spotify as source of truth, Yandex Music
+    link-only; adding a platform needs no dispatch or persistence
+    changes.<br />
     </li>
-    <li>Orchestrated infrastructure migration from DigitalOcean to AWS:
-    backend on ECS Fargate, frontend on CloudFront.<br />
+    <li>Replaced brittle HTML scraping with resilient async API clients:
+    httpx, TOTP-based Spotify auth (incl. a token-refresh race fix),
+    retries, a shared proxy pool and anti-abuse handling.<br />
     </li>
-    <li>Developed AWS Lambda functions for periodic harvesting and data
-    processing.<br />
+    <li>Built an event-driven serverless pipeline on AWS: EventBridge
+    schedules → Lambda fan-out → SQS, with container-image Lambdas
+    sharing the Django codebase, partial-batch failure reporting and DLQ
+    redrive.<br />
     </li>
-    <li>Created CI/CD pipelines (GitHub Actions) for backend and
-    frontend.<br />
+    <li>Implemented rate-limited cross-platform link syndication
+    (Odesli) as a scheduled drainer with a daily budget counter and a
+    30-day refresh window, staying inside a ~2 req/min limit.<br />
     </li>
-    <li>Automated daily site updates to eliminate manual steps and
-    improve reliability.<br />
+    <li>Migrated data storage from Google Sheets to a Django REST API on
+    PostgreSQL, and infrastructure from DigitalOcean to AWS: backend on
+    ECS Fargate, frontend on CloudFront.<br />
     </li>
-    <li>Implemented a robust data transfer mechanism from Google Sheets
-    to PostgreSQL.<br />
+    <li>Cut API latency and cost: eliminated N+1 queries, added hot-path
+    indexes and pruned redundant ones, moved artist leaderboards onto a
+    concurrently-refreshed materialized view behind a debounced refresh
+    lock.<br />
     </li>
-    <li>Introduced enhanced Django admin with custom features improving
-    data management.<br />
+    <li>Made read paths CDN-cacheable — ETag/304 handling,
+    Cache-Control, GZip, long-lived S3 caching and responsive WebP
+    srcset ladders that cut image payloads.<br />
     </li>
-    <li>Applied Terraform to enable reproducible, versioned AWS resource
-    provisioning.</li>
+    <li>Added geo-aware features with GeoDjango/PostGIS: concerts
+    filtered by viewer country and region-specific catalog rules.<br />
+    </li>
+    <li>Built the editorial CMS on headless Wagtail: custom StreamField
+    blocks, OEmbed embeds, a custom image model with automatic WebP
+    conversion, and multilingual content.<br />
+    </li>
+    <li>Extended the Django admin into an operations console —
+    application intake and approval flows, duplicate merging, forced
+    re-syncs and one-click platform actions.<br />
+    </li>
+    <li>Hardened operations: Sentry, a pytest suite in CI, ruff and
+    pre-commit, multi-stage Docker images, Terraform-provisioned AWS,
+    and GitHub Actions deploying ECS and every Lambda.</li>
     </ul>
     <p><strong>Stack:</strong><br />
-    Python, Django, DRF, Django templates, PostgreSQL, Google Sheets,
-    AWS (ECS, RDS, Lambda, SQS), BeautifulSoup4, DigitalOcean Droplets,
-    GitHub Actions, Terraform.</p>
+    Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS,
+    GeoDjango, asyncio/httpx, Gunicorn + gevent, Pillow, AWS (ECS
+    Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR),
+    Terraform, Docker, GitHub Actions, pytest, ruff, Sentry, uv, Spotify
+    / Yandex Music / Odesli APIs, Google Sheets, DigitalOcean
+    Droplets.</p>
     <hr />
     <h2 id="remedy-product-studio-software-engineer-l5">Remedy Product
     Studio — Software Engineer | L5</h2>

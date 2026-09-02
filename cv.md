@@ -95,19 +95,22 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Par
 *Online music media*  
 **Feb 2024 – ongoing**
 
-- Launched the public-facing website with seamless access to artist data.  
-- Built Python scrapers for automated ingestion of Spotify and Yandex Music metadata.  
-- Migrated data storage from Google Sheets to a Django REST API backed by PostgreSQL.  
-- Orchestrated infrastructure migration from DigitalOcean to AWS: backend on ECS Fargate, frontend on CloudFront.  
-- Developed AWS Lambda functions for periodic harvesting and data processing.  
-- Created CI/CD pipelines (GitHub Actions) for backend and frontend.  
-- Automated daily site updates to eliminate manual steps and improve reliability.  
-- Implemented a robust data transfer mechanism from Google Sheets to PostgreSQL.  
-- Introduced enhanced Django admin with custom features improving data management.  
-- Applied Terraform to enable reproducible, versioned AWS resource provisioning.
+- Launched and run the public site end-to-end — a Django REST API plus headless Wagtail CMS serving artists, releases, concerts and editorial content.  
+- Designed a three-layer domain model (canonical catalog / per-platform integration / CMS pages) that keeps streaming data, editorial truth and content decoupled.  
+- Built a pluggable platform-adapter layer with declarative capability flags — Spotify as source of truth, Yandex Music link-only; adding a platform needs no dispatch or persistence changes.  
+- Replaced brittle HTML scraping with resilient async API clients: httpx, TOTP-based Spotify auth (incl. a token-refresh race fix), retries, a shared proxy pool and anti-abuse handling.  
+- Built an event-driven serverless pipeline on AWS: EventBridge schedules → Lambda fan-out → SQS, with container-image Lambdas sharing the Django codebase, partial-batch failure reporting and DLQ redrive.  
+- Implemented rate-limited cross-platform link syndication (Odesli) as a scheduled drainer with a daily budget counter and a 30-day refresh window, staying inside a ~2 req/min limit.  
+- Migrated data storage from Google Sheets to a Django REST API on PostgreSQL, and infrastructure from DigitalOcean to AWS: backend on ECS Fargate, frontend on CloudFront.  
+- Cut API latency and cost: eliminated N+1 queries, added hot-path indexes and pruned redundant ones, moved artist leaderboards onto a concurrently-refreshed materialized view behind a debounced refresh lock.  
+- Made read paths CDN-cacheable — ETag/304 handling, Cache-Control, GZip, long-lived S3 caching and responsive WebP srcset ladders that cut image payloads.  
+- Added geo-aware features with GeoDjango/PostGIS: concerts filtered by viewer country and region-specific catalog rules.  
+- Built the editorial CMS on headless Wagtail: custom StreamField blocks, OEmbed embeds, a custom image model with automatic WebP conversion, and multilingual content.  
+- Extended the Django admin into an operations console — application intake and approval flows, duplicate merging, forced re-syncs and one-click platform actions.  
+- Hardened operations: Sentry, a pytest suite in CI, ruff and pre-commit, multi-stage Docker images, Terraform-provisioned AWS, and GitHub Actions deploying ECS and every Lambda.
 
 **Stack:**  
-Python, Django, DRF, Django templates, PostgreSQL, Google Sheets, AWS (ECS, RDS, Lambda, SQS), BeautifulSoup4, DigitalOcean Droplets, GitHub Actions, Terraform.
+Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS, GeoDjango, asyncio/httpx, Gunicorn + gevent, Pillow, AWS (ECS Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR), Terraform, Docker, GitHub Actions, pytest, ruff, Sentry, uv, Spotify / Yandex Music / Odesli APIs, Google Sheets, DigitalOcean Droplets.
 
 ---
 
