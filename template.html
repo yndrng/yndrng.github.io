@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>$title$</title>
-  </head>
+$if(travelpage)$    <script src="map.js" defer></script>
+$endif$  </head>
   <body>
     <nav class="tabs">
       <a href="cv.html"$if(cvpage)$ class="active"$endif$>CV</a>
       <a href="gigs.html"$if(gigspage)$ class="active"$endif$>Gigs</a>
+      <a href="travel.html"$if(travelpage)$ class="active"$endif$>Travel</a>
     </nav>
 $if(cvpage)$    <a href="cv.pdf" class="document-link">As PDF</a>
 $endif$    <h1>$title$</h1>

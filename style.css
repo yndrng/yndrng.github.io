@@ -213,3 +213,77 @@ th, td {
 td {
   border-bottom: 1px solid #e5e7eb;
 }
+
+/* --- World map --- */
+.worldmap {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  margin: 0.5em 0 1em;
+  background: #f9fafb;
+  touch-action: none;
+  cursor: grab;
+}
+
+.worldmap.dragging {
+  cursor: grabbing;
+}
+
+.worldmap path.country {
+  fill: #e5e7eb;
+  stroke: #f9fafb;
+  stroke-width: 0.5;
+}
+
+.worldmap path.visited {
+  fill: #5e81ac;
+  cursor: pointer;
+}
+
+.worldmap path.visited:hover,
+.worldmap path.visited:focus {
+  fill: #2e3440;
+  outline: none;
+}
+
+.worldmap circle.city {
+  fill: #2d4e5e;
+  stroke: #f9fafb;
+  stroke-width: 0.5;
+}
+
+.worldmap circle.city:hover,
+.worldmap circle.city:focus {
+  fill: #111827;
+  outline: none;
+}
+
+.map-tip {
+  position: fixed;
+  pointer-events: none;
+  z-index: 10;
+  background: #2e3440;
+  color: #f9fafb;
+  font-family: Monaco, Menlo, monospace;
+  font-size: 80%;
+  padding: 0.3em 0.6em;
+  border-radius: 3px;
+  max-width: 240px;
+}
+
+.map-count {
+  font-family: Monaco, Menlo, monospace;
+  font-size: 90%;
+  color: #4c566a;
+  margin: 0 0 0.4em;
+}
+
+.map-reset {
+  margin: 0 0 1.4em;
+}
+
+.map-reset a {
+  font-family: Monaco, Menlo, monospace;
+  font-size: 90%;
+}

@@ -10,4 +10,8 @@ echo "compiling gigs page..."
 python3 gigs.py
 pandoc -f gfm --standalone --template template.html --metadata gigspage=true gigs.md -o gigs.html
 
+echo "compiling travel page..."
+python3 travel.py
+pandoc -f gfm --standalone --template template.html --metadata travelpage=true travel.md -o travel.html
+
 echo "completed"

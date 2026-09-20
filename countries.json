@@ -1,0 +1,10 @@
+[
+  { "code": "BY", "name": "Belarus", "years": [1993], "note": "Home",
+    "cities": ["Minsk"] },
+
+  { "code": "DE", "name": "Germany", "years": [2018, 2022], "note": "Work trips",
+    "cities": ["Berlin", "Munich"] },
+
+  { "code": "ES", "name": "Spain", "years": [2023],
+    "cities": [ { "name": "Barcelona", "years": [2023], "note": "Primavera Sound" } ] }
+]
