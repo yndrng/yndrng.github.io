@@ -65,9 +65,54 @@ def country_code(props):
     return None
 
 
+def _ring_bbox(ring):
+    xs = [p[0] for p in ring]
+    ys = [p[1] for p in ring]
+    return min(xs), min(ys), max(xs), max(ys)
+
+
+def reassign_crimea(data):
+    """Natural Earth's 110m dataset draws Crimea as a detached ring inside
+    Russia's MultiPolygon, reflecting the post-2014 de facto occupation.
+    Crimea is internationally recognized as Ukrainian territory (UN General
+    Assembly Resolution 68/262), so move that ring into Ukraine's geometry
+    here, before paths are built, so it is colored by Ukraine's visited
+    status rather than Russia's."""
+    russia = next((f for f in data["features"] if f["properties"].get("NAME") == "Russia"), None)
+    ukraine = next((f for f in data["features"] if f["properties"].get("NAME") == "Ukraine"), None)
+    if not russia or not ukraine:
+        print("  warning: could not find Russia/Ukraine features to reassign Crimea")
+        return
+
+    polys = russia["geometry"]["coordinates"]
+    crimea_idx = None
+    for i, poly in enumerate(polys):
+        minx, miny, maxx, maxy = _ring_bbox(poly[0])
+        # Crimea's known extent (lon ~32.4-36.7, lat ~44.3-46.2) is distinct from
+        # mainland Russia and from any other Russian exclave (e.g. Kaliningrad).
+        if 31 <= minx <= 38 and 43 <= miny <= 47 and maxx <= 38:
+            crimea_idx = i
+            break
+
+    if crimea_idx is None:
+        print("  warning: could not locate Crimea inside Russia's geometry -- "
+              "map may show it as Russian territory")
+        return
+
+    crimea_poly = polys.pop(crimea_idx)
+    if ukraine["geometry"]["type"] == "Polygon":
+        ukraine["geometry"] = {
+            "type": "MultiPolygon",
+            "coordinates": [ukraine["geometry"]["coordinates"], crimea_poly],
+        }
+    else:
+        ukraine["geometry"]["coordinates"].append(crimea_poly)
+
+
 def load_countries():
     with GEOJSON.open(encoding="utf-8") as handle:
         data = json.load(handle)
+    reassign_crimea(data)
     features = {}
     bounds = [math.inf, math.inf, -math.inf, -math.inf]  # minx, miny, maxx, maxy
     for feature in data["features"]:
