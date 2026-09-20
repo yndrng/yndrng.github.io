@@ -1,23 +1,23 @@
 [
-  { "code": "BY", "name": "Belarus", "years": [1993], "note": "Home",
+  { "code": "BY", "name": "Belarus", "years": [1993],
     "cities": [
       "Minsk",
-      { "name": "Shumilino", "note": "Grew up here", "lat": 55.5667, "lon": 29.6167 }
+      { "name": "Shumilino", "lat": 55.5667, "lon": 29.6167 }
     ] },
 
-  { "code": "GE", "name": "Georgia", "years": [2022], "note": "Lived in Tbilisi",
+  { "code": "GE", "name": "Georgia", "years": [2022],
     "cities": [
-      { "name": "Tbilisi", "years": [2022], "note": "Lived here" },
+      { "name": "Tbilisi", "years": [2022] },
       "Batumi"
     ] },
 
-  { "code": "PL", "name": "Poland", "years": [2022], "note": "Living in Warsaw since 2022",
+  { "code": "PL", "name": "Poland", "years": [2022],
     "cities": [
-      { "name": "Warsaw", "years": [2022], "note": "Living here since 2022" },
+      { "name": "Warsaw", "years": [2022] },
       "Krakow", "Poznan", "Wroclaw", "Bydgoszcz", "Gdansk"
     ] },
 
-  { "code": "DE", "name": "Germany", "years": [2018, 2022], "note": "Work trips",
+  { "code": "DE", "name": "Germany", "years": [2018, 2022],
     "cities": ["Berlin", "Dresden", "Hamburg"] },
 
   { "code": "FR", "name": "France",
@@ -25,9 +25,9 @@
 
   { "code": "ES", "name": "Spain", "years": [2023],
     "cities": [
-      { "name": "Barcelona", "years": [2023, 2026], "note": "" },
+      { "name": "Barcelona", "years": [2023, 2026] },
       "Palma",
-      { "name": "Valencia", "note": "Layover" },
+      "Valencia",
       "Granada"
     ] },
 
@@ -58,21 +58,18 @@
   { "code": "TR", "name": "Türkiye",
     "cities": ["Istanbul"] },
 
-  { "code": "BG", "name": "Bulgaria", "note": "As a child" },
+  { "code": "BG", "name": "Bulgaria" },
 
-  { "code": "EG", "name": "Egypt", "note": "As a child" },
+  { "code": "EG", "name": "Egypt" },
 
-  { "code": "UA", "name": "Ukraine", "note": "As a child",
+  { "code": "UA", "name": "Ukraine",
     "cities": [
       "Odesa", "Yalta", "Alushta",
       { "name": "Alupka", "lat": 44.4167, "lon": 34.05 }
     ] },
 
   { "code": "RU", "name": "Russia",
-    "cities": [
-      "Saint Petersburg",
-      { "name": "Moscow", "note": "Layover" }
-    ] },
+    "cities": ["Saint Petersburg", "Moscow"] },
 
   { "code": "LT", "name": "Lithuania",
     "cities": ["Vilnius"] },
@@ -86,6 +83,6 @@
   { "code": "NO", "name": "Norway",
     "cities": ["Larvik"] },
 
-  { "code": "SE", "name": "Sweden", "note": "As a child, don't remember a thing",
+  { "code": "SE", "name": "Sweden",
     "cities": ["Stockholm"] }
 ]
