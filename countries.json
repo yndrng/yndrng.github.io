@@ -2,7 +2,12 @@
   { "code": "BY", "name": "Belarus", "years": [1993],
     "cities": [
       "Minsk",
-      { "name": "Shumilino", "lat": 55.5667, "lon": 29.6167 }
+      { "name": "Shumilino", "lat": 55.5667, "lon": 29.6167 },
+      { "name": "Mogilev", "lat": 53.90876, "lon": 30.34044 },
+      { "name": "Grodno", "lat": 53.6758, "lon": 23.82887 },
+      "Brest",
+      "Polotsk",
+      { "name": "Lepel", "lat": 54.8833, "lon": 28.7 }
     ] },
 
   { "code": "GE", "name": "Georgia", "years": [2022],
