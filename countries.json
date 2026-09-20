@@ -13,13 +13,16 @@
   { "code": "GE", "name": "Georgia", "years": [2022],
     "cities": [
       { "name": "Tbilisi", "years": [2022] },
-      "Batumi"
+      "Batumi", "Kobuleti",
+      { "name": "Sighnaghi", "lat": 41.6194, "lon": 45.9161 }
     ] },
 
   { "code": "PL", "name": "Poland", "years": [2022],
     "cities": [
       { "name": "Warsaw", "years": [2022] },
-      "Krakow", "Poznan", "Wroclaw", "Bydgoszcz", "Gdansk"
+      "Krakow", "Poznan", "Wroclaw", "Bydgoszcz", "Gdansk",
+      "Gdynia", "Sopot", "Lodz",
+      { "name": "Hel", "lat": 54.6021, "lon": 18.801 }
     ] },
 
   { "code": "DE", "name": "Germany", "years": [2018, 2022],
