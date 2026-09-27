@@ -69,7 +69,12 @@ Music overall: vinyl collecting, concerts, guitar, history.
 ### Project in Energy domain
 *Worldwide*
 
-- Take a part of a huge migration project.
+- Migrated customer communications off a legacy messaging path onto a transactional platform across several energy markets: onboarding, payments, meter readings, move-out, cooling-off, and supply events.
+- Designed message triggers with context builders, recipient selection, and document attachments so each message resolves the right account, property, product, and PDF.
+- Dual-published during rollout, then removed the legacy message types, workflow steps, and templates once the new path was live.
+- Fixed production defects in live customer communications: duplicate sends, incorrect dates, and messages that should have been suppressed.
+- Added operator preview (dependent fields, past properties, render before send) and shared message context across brands so the same communication does not fork per market.
+- Prepared handover documentation for client teams, documenting potential issues and recommended resolutions.
 
 **Stack:**
 Python, Django, pytest
