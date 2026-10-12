@@ -60,7 +60,7 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 ### Interests
 Music overall: <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vinyl collecting</a>, <a href="https://yndrng.github.io/gigs.html" target="_blank">gigs</a>, instruments (guitar, vocals, bass, someday - piano and drums), history. 
 
-# Employment
+# Ongoing
 
 ## Godel Technologies Europe — Senior Software Engineer  
 *Warsaw, Poland*  
@@ -80,21 +80,6 @@ Music overall: <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vin
 
 **Stack:**
 Python, Django (w. templates), pytest, Claude Code, Slack Workflows
-
-## Fermata — Software Engineer  
-*AI in Agriculture*  
-**Dec 2024 – Dec 2025**
-
-- Built a Slack app that automated a key business-critical reporting flow, integrating with the internal report service and enabling teams to generate reports on demand or on schedule.
-- Engineered a secure image delivery pipeline using CDN, improving latency and user experience compared to direct S3 access.  
-- Overhauled a complex legacy client integration: emulated camera input, implemented custom serialization, ensured reliable communication.  
-- Implemented centralized secrets management with AWS SSM Parameter Store, introducing versioned, secure credential handling.  
-- Built a service for automated arrangement of zone objects (camera & positions) with flexible configuration options.  
-- Contributed to image tiling features, reducing loading time by splitting images into smaller tiles.  
-- Refactored filtering system powering core functionality for accurate and efficient querying.
-
-**Stack:**  
-Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Parameter Store, Lambda, EventBridge), pytest, Sentry, Nomad, Portainer.
 
 ---
 
@@ -119,6 +104,25 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Par
 
 **Stack:**  
 Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS, GeoDjango, asyncio/httpx, Gunicorn + gevent, Pillow, AWS (ECS Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR), Terraform, Docker, GitHub Actions, pytest, ruff, Sentry, uv, Spotify / Yandex Music / Odesli APIs, Google Sheets, DigitalOcean Droplets.
+
+---
+
+# Past
+
+## Fermata — Software Engineer  
+*AI in Agriculture*  
+**Dec 2024 – Dec 2025**
+
+- Built a Slack app that automated a key business-critical reporting flow, integrating with the internal report service and enabling teams to generate reports on demand or on schedule.
+- Engineered a secure image delivery pipeline using CDN, improving latency and user experience compared to direct S3 access.  
+- Overhauled a complex legacy client integration: emulated camera input, implemented custom serialization, ensured reliable communication.  
+- Implemented centralized secrets management with AWS SSM Parameter Store, introducing versioned, secure credential handling.  
+- Built a service for automated arrangement of zone objects (camera & positions) with flexible configuration options.  
+- Contributed to image tiling features, reducing loading time by splitting images into smaller tiles.  
+- Refactored filtering system powering core functionality for accurate and efficient querying.
+
+**Stack:**  
+Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Parameter Store, Lambda, EventBridge), pytest, Sentry, Nomad, Portainer.
 
 ---
 
