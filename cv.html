@@ -107,8 +107,8 @@
     Workflows, making the handoff quicker and more consistent for the
     team.</li>
     </ul>
-    <p><strong>Stack:</strong> Python, Django (w. templates), pytest,
-    Claude Code, Slack Workflows</p>
+    <p><strong>Stack:</strong> Python, Django (w. templates), Claude
+    Code, Slack Workflows</p>
     <hr />
     <h2
     id="klik-technical-director-pet-project"><a href="https://klik.music" target="_blank">KLIK</a>
@@ -116,21 +116,16 @@
     <p><em>Online music media</em><br />
     <strong>Feb 2024 – ongoing</strong></p>
     <ul>
-    <li>Coordinated a team of developers with a light touch, keeping
-    priorities aligned and delivery on track alongside hands-on
-    engineering.<br />
+    <li>Coordinated a team of developers with a light touch, alongside
+    hands-on engineering.<br />
     </li>
     <li>Launched the public-facing website: a Django REST API with a
     headless Wagtail CMS serving artists, releases, concerts, and
     editorial content.<br />
     </li>
-    <li>Designed a three-layer domain model (canonical catalog,
-    per-platform integration, CMS pages) to keep streaming data,
-    editorial content, and pages decoupled.<br />
-    </li>
-    <li>Built a pluggable platform-adapter layer with capability flags
-    for Spotify and Yandex Music, so adding a new platform requires no
-    changes to existing code.<br />
+    <li>Built a pluggable system for integrating music platforms
+    (Spotify, Yandex Music), so new ones can be added without touching
+    existing code.<br />
     </li>
     <li>Replaced HTML scraping with resilient async API clients (httpx)
     featuring retries, a shared proxy pool, and TOTP-based Spotify
@@ -141,19 +136,16 @@
     failure handling and DLQ redrive.<br />
     </li>
     <li>Implemented rate-limited cross-platform link syndication via
-    Odesli, running as a scheduled job within a daily request
-    budget.<br />
+    Odesli, as a scheduled job within a daily request budget.<br />
     </li>
     <li>Migrated data storage from Google Sheets to a Django REST API on
     PostgreSQL, and infrastructure from DigitalOcean to AWS: backend on
     ECS Fargate, frontend on CloudFront.<br />
     </li>
     <li>Optimized API performance and cost: eliminated N+1 queries,
-    added indexes, and moved leaderboards onto a materialized
-    view.<br />
-    </li>
-    <li>Made read paths CDN-cacheable with ETag/304, Cache-Control,
-    GZip, and responsive WebP images.<br />
+    added indexes, moved leaderboards onto a materialized view, and made
+    read paths CDN-cacheable (ETag/304, Cache-Control, GZip, responsive
+    WebP images).<br />
     </li>
     <li>Added geo-aware features with GeoDjango/PostGIS, filtering
     concerts by viewer country and region.<br />
@@ -166,16 +158,13 @@
     </li>
     <li>Built CI/CD pipelines (GitHub Actions) for automated testing and
     deployments, and provisioned AWS with Terraform for versioned,
-    reproducible infrastructure; added Sentry, pytest, ruff, and
-    pre-commit.</li>
+    reproducible infrastructure.</li>
     </ul>
     <p><strong>Stack:</strong><br />
-    Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS,
-    GeoDjango, asyncio/httpx, Gunicorn + gevent, Pillow, AWS (ECS
-    Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR),
-    Terraform, Docker, GitHub Actions, pytest, ruff, Sentry, uv, Spotify
-    / Yandex Music / Odesli APIs, Google Sheets, DigitalOcean
-    Droplets.</p>
+    Python, Django, DRF, Wagtail, PostgreSQL/PostGIS, asyncio/httpx, AWS
+    (ECS Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR),
+    Terraform, Docker, GitHub Actions, Spotify / Yandex Music / Odesli
+    APIs.</p>
     <hr />
     <h1 id="past">Past</h1>
     <h2 id="fermata-software-engineer">Fermata — Software Engineer</h2>
@@ -207,8 +196,7 @@
     </ul>
     <p><strong>Stack:</strong><br />
     Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3,
-    CloudFront, Parameter Store, Lambda, EventBridge), pytest, Sentry,
-    Nomad, Portainer.</p>
+    CloudFront, Parameter Store, Lambda, EventBridge), Nomad.</p>
     <hr />
     <h2 id="remedy-product-studio-software-engineer-l5">Remedy Product
     Studio — Software Engineer | L5</h2>
@@ -237,7 +225,7 @@
     </ul>
     <p><strong>Stack:</strong><br />
     Python, FastAPI/Flask, AWS (DynamoDB, SES, RDS, S3), Redis, Cybermed
-    DB, JavaScript + React, Sentry.</p>
+    DB, JavaScript + React.</p>
     <h3 id="halter-ranch-pos-system">Halter Ranch — POS system</h3>
     <p><em>CA, US</em></p>
     <ul>
@@ -272,8 +260,8 @@
     operations.</li>
     </ul>
     <p><strong>Stack:</strong><br />
-    Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, pytest, AWS
-    (RDS, SQS), ShipCompliant, WineDirect, Auth0, Klaviyo, Sentry.</p>
+    Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, AWS (RDS,
+    SQS), ShipCompliant, WineDirect, Auth0, Klaviyo.</p>
     <hr />
     <h2 id="innowise-group-middle-software-engineer-manager">Innowise
     Group — Middle Software Engineer / Manager</h2>
@@ -328,7 +316,7 @@
     </ul>
     <p><strong>Stack:</strong><br />
     Python, FastAPI, AWS (Lambda, SQS, API Gateway, RDS, OpenSearch,
-    S3), MySQL, MongoDB, pytest.</p>
+    S3), MySQL, MongoDB.</p>
     <h3 id="nda-project-cybersecurity-domain">NDA Project —
     Cybersecurity domain</h3>
     <ul>
@@ -369,7 +357,7 @@
     </ul>
     <p><strong>Stack:</strong><br />
     Python, Django, Celery, PostgreSQL, JavaScript, jQuery, Bootstrap,
-    HTML5, CSS3, Mailchimp, pytest, Django templates, React.js.</p>
+    HTML5, CSS3, Mailchimp, Django templates, React.js.</p>
     <h1 id="education">Education</h1>
     <h2
     id="belarusian-state-university-of-informatics-and-radioelectronics">Belarusian

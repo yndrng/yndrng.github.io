@@ -79,7 +79,7 @@ Music overall: <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vin
 - Streamlined handing tasks over to internal review with Slack Workflows, making the handoff quicker and more consistent for the team.
 
 **Stack:**
-Python, Django (w. templates), pytest, Claude Code, Slack Workflows
+Python, Django (w. templates), Claude Code, Slack Workflows
 
 ---
 
@@ -87,23 +87,21 @@ Python, Django (w. templates), pytest, Claude Code, Slack Workflows
 *Online music media*  
 **Feb 2024 – ongoing**
 
-- Coordinated a team of developers with a light touch, keeping priorities aligned and delivery on track alongside hands-on engineering.  
+- Coordinated a team of developers with a light touch, alongside hands-on engineering.  
 - Launched the public-facing website: a Django REST API with a headless Wagtail CMS serving artists, releases, concerts, and editorial content.  
-- Designed a three-layer domain model (canonical catalog, per-platform integration, CMS pages) to keep streaming data, editorial content, and pages decoupled.  
-- Built a pluggable platform-adapter layer with capability flags for Spotify and Yandex Music, so adding a new platform requires no changes to existing code.  
+- Built a pluggable system for integrating music platforms (Spotify, Yandex Music), so new ones can be added without touching existing code.  
 - Replaced HTML scraping with resilient async API clients (httpx) featuring retries, a shared proxy pool, and TOTP-based Spotify authentication.  
 - Built an event-driven serverless pipeline on AWS (EventBridge, Lambda, SQS) for scheduled data harvesting, with partial-batch failure handling and DLQ redrive.  
-- Implemented rate-limited cross-platform link syndication via Odesli, running as a scheduled job within a daily request budget.  
+- Implemented rate-limited cross-platform link syndication via Odesli, as a scheduled job within a daily request budget.  
 - Migrated data storage from Google Sheets to a Django REST API on PostgreSQL, and infrastructure from DigitalOcean to AWS: backend on ECS Fargate, frontend on CloudFront.  
-- Optimized API performance and cost: eliminated N+1 queries, added indexes, and moved leaderboards onto a materialized view.  
-- Made read paths CDN-cacheable with ETag/304, Cache-Control, GZip, and responsive WebP images.  
+- Optimized API performance and cost: eliminated N+1 queries, added indexes, moved leaderboards onto a materialized view, and made read paths CDN-cacheable (ETag/304, Cache-Control, GZip, responsive WebP images).  
 - Added geo-aware features with GeoDjango/PostGIS, filtering concerts by viewer country and region.  
 - Set up the editorial CMS on headless Wagtail with custom StreamField blocks, OEmbed embeds, and multilingual content.  
 - Extended the Django admin into an operations console for application approvals, duplicate merging, and forced re-syncs.  
-- Built CI/CD pipelines (GitHub Actions) for automated testing and deployments, and provisioned AWS with Terraform for versioned, reproducible infrastructure; added Sentry, pytest, ruff, and pre-commit.  
+- Built CI/CD pipelines (GitHub Actions) for automated testing and deployments, and provisioned AWS with Terraform for versioned, reproducible infrastructure.  
 
 **Stack:**  
-Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS, GeoDjango, asyncio/httpx, Gunicorn + gevent, Pillow, AWS (ECS Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR), Terraform, Docker, GitHub Actions, pytest, ruff, Sentry, uv, Spotify / Yandex Music / Odesli APIs, Google Sheets, DigitalOcean Droplets.
+Python, Django, DRF, Wagtail, PostgreSQL/PostGIS, asyncio/httpx, AWS (ECS Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR), Terraform, Docker, GitHub Actions, Spotify / Yandex Music / Odesli APIs.
 
 ---
 
@@ -122,7 +120,7 @@ Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS, GeoDjango, asyn
 - Refactored filtering system powering core functionality for accurate and efficient querying.
 
 **Stack:**  
-Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Parameter Store, Lambda, EventBridge), pytest, Sentry, Nomad, Portainer.
+Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Parameter Store, Lambda, EventBridge), Nomad.
 
 ---
 
@@ -141,7 +139,7 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Par
 - Contributed to frontend development using React for cohesive integration with backend services.
 
 **Stack:**  
-Python, FastAPI/Flask, AWS (DynamoDB, SES, RDS, S3), Redis, Cybermed DB, JavaScript + React, Sentry.
+Python, FastAPI/Flask, AWS (DynamoDB, SES, RDS, S3), Redis, Cybermed DB, JavaScript + React.
 
 ### Halter Ranch — POS system  
 *CA, US*
@@ -160,7 +158,7 @@ Python, FastAPI/Flask, AWS (DynamoDB, SES, RDS, S3), Redis, Cybermed DB, JavaScr
 - Integrated with WineDirect for direct-to-consumer operations.
 
 **Stack:**  
-Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, pytest, AWS (RDS, SQS), ShipCompliant, WineDirect, Auth0, Klaviyo, Sentry.
+Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, AWS (RDS, SQS), ShipCompliant, WineDirect, Auth0, Klaviyo.
 
 ---
 
@@ -195,7 +193,7 @@ Python, FastAPI, AWS (Lambda, SAM, API Gateway, SQS, RDS, S3), Serverless Framew
 - Built unit, integration, and E2E tests.
 
 **Stack:**  
-Python, FastAPI, AWS (Lambda, SQS, API Gateway, RDS, OpenSearch, S3), MySQL, MongoDB, pytest.
+Python, FastAPI, AWS (Lambda, SQS, API Gateway, RDS, OpenSearch, S3), MySQL, MongoDB.
 
 ### NDA Project — Cybersecurity domain  
 
@@ -224,7 +222,7 @@ Python, Django, DRF, MariaDB.
 - Migrated frontend from Django templates + jQuery to React.
 
 **Stack:**  
-Python, Django, Celery, PostgreSQL, JavaScript, jQuery, Bootstrap, HTML5, CSS3, Mailchimp, pytest, Django templates, React.js.
+Python, Django, Celery, PostgreSQL, JavaScript, jQuery, Bootstrap, HTML5, CSS3, Mailchimp, Django templates, React.js.
 
 # Education
 
