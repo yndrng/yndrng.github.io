@@ -50,10 +50,10 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 
 ### Communication
 
-**English** – Full professional proficiency.  
+**English** – B2+.  
 **Russian** – Native.  
 **Belarusian** – Native.  
-**Polish** – Limited proficiency.
+**Polish** – B1.
 
 ---
 
