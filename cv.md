@@ -58,7 +58,7 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 ---
 
 ### Interests
-Music overall: vinyl collecting, concerts, guitar, history.
+Music overall: <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vinyl collecting</a>, <a href="https://yndrng.github.io/gigs.html" target="_blank">gigs</a>, instruments (guitar, vocals, bass, someday - piano and drums), history. 
 
 # Employment
 
@@ -100,18 +100,18 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Par
 *Online music media*  
 **Feb 2024 – ongoing**
 
-- Launched and run the public site end-to-end — a Django REST API plus headless Wagtail CMS serving artists, releases, concerts and editorial content.  
-- Designed a three-layer domain model (canonical catalog / per-platform integration / CMS pages) that keeps streaming data, editorial truth and content decoupled.  
+- Launched and run the public site end-to-end — a Django REST API plus headless Wagtail CMS serving artists, releases, concerts, and editorial content.  
+- Designed a three-layer domain model (canonical catalog / per-platform integration / CMS pages) that keeps streaming data, editorial truth, and content decoupled.  
 - Built a pluggable platform-adapter layer with declarative capability flags — Spotify as source of truth, Yandex Music link-only; adding a platform needs no dispatch or persistence changes.  
-- Replaced brittle HTML scraping with resilient async API clients: httpx, TOTP-based Spotify auth (incl. a token-refresh race fix), retries, a shared proxy pool and anti-abuse handling.  
-- Built an event-driven serverless pipeline on AWS: EventBridge schedules → Lambda fan-out → SQS, with container-image Lambdas sharing the Django codebase, partial-batch failure reporting and DLQ redrive.  
+- Replaced brittle HTML scraping with resilient async API clients: httpx, TOTP-based Spotify auth (incl. a token-refresh race fix), retries, a shared proxy pool, and anti-abuse handling.  
+- Built an event-driven serverless pipeline on AWS: EventBridge schedules → Lambda fan-out → SQS, with container-image Lambdas sharing the Django codebase, partial-batch failure reporting, and DLQ redrive.  
 - Implemented rate-limited cross-platform link syndication (Odesli) as a scheduled drainer with a daily budget counter and a 30-day refresh window, staying inside a ~2 req/min limit.  
 - Migrated data storage from Google Sheets to a Django REST API on PostgreSQL, and infrastructure from DigitalOcean to AWS: backend on ECS Fargate, frontend on CloudFront.  
 - Cut API latency and cost: eliminated N+1 queries, added hot-path indexes and pruned redundant ones, moved artist leaderboards onto a concurrently-refreshed materialized view behind a debounced refresh lock.  
-- Made read paths CDN-cacheable — ETag/304 handling, Cache-Control, GZip, long-lived S3 caching and responsive WebP srcset ladders that cut image payloads.  
+- Made read paths CDN-cacheable — ETag/304 handling, Cache-Control, GZip, long-lived S3 caching, and responsive WebP srcset ladders that cut image payloads.  
 - Added geo-aware features with GeoDjango/PostGIS: concerts filtered by viewer country and region-specific catalog rules.  
 - Built the editorial CMS on headless Wagtail: custom StreamField blocks, OEmbed embeds, a custom image model with automatic WebP conversion, and multilingual content.  
-- Extended the Django admin into an operations console — application intake and approval flows, duplicate merging, forced re-syncs and one-click platform actions.  
+- Extended the Django admin into an operations console — application intake and approval flows, duplicate merging, forced re-syncs, and one-click platform actions.  
 - Hardened operations: Sentry, a pytest suite in CI, ruff and pre-commit, multi-stage Docker images, Terraform-provisioned AWS, and GitHub Actions deploying ECS and every Lambda.
 
 **Stack:**  

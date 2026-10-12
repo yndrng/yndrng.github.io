@@ -68,7 +68,12 @@
     <strong>Polish</strong> – Limited proficiency.</p>
     <hr />
     <h3 id="interests">Interests</h3>
-    <p>Music overall: vinyl collecting, concerts, guitar, history.</p>
+    <p>Music overall:
+    <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vinyl
+    collecting</a>,
+    <a href="https://yndrng.github.io/gigs.html" target="_blank">gigs</a>,
+    instruments (guitar, vocals, bass, someday - piano and drums),
+    history.</p>
     <h1 id="employment">Employment</h1>
     <h2 id="godel-technologies-europe-senior-software-engineer">Godel
     Technologies Europe — Senior Software Engineer</h2>
@@ -136,12 +141,12 @@
     <strong>Feb 2024 – ongoing</strong></p>
     <ul>
     <li>Launched and run the public site end-to-end — a Django REST API
-    plus headless Wagtail CMS serving artists, releases, concerts and
+    plus headless Wagtail CMS serving artists, releases, concerts, and
     editorial content.<br />
     </li>
     <li>Designed a three-layer domain model (canonical catalog /
     per-platform integration / CMS pages) that keeps streaming data,
-    editorial truth and content decoupled.<br />
+    editorial truth, and content decoupled.<br />
     </li>
     <li>Built a pluggable platform-adapter layer with declarative
     capability flags — Spotify as source of truth, Yandex Music
@@ -150,12 +155,12 @@
     </li>
     <li>Replaced brittle HTML scraping with resilient async API clients:
     httpx, TOTP-based Spotify auth (incl. a token-refresh race fix),
-    retries, a shared proxy pool and anti-abuse handling.<br />
+    retries, a shared proxy pool, and anti-abuse handling.<br />
     </li>
     <li>Built an event-driven serverless pipeline on AWS: EventBridge
     schedules → Lambda fan-out → SQS, with container-image Lambdas
-    sharing the Django codebase, partial-batch failure reporting and DLQ
-    redrive.<br />
+    sharing the Django codebase, partial-batch failure reporting, and
+    DLQ redrive.<br />
     </li>
     <li>Implemented rate-limited cross-platform link syndication
     (Odesli) as a scheduled drainer with a daily budget counter and a
@@ -171,7 +176,7 @@
     lock.<br />
     </li>
     <li>Made read paths CDN-cacheable — ETag/304 handling,
-    Cache-Control, GZip, long-lived S3 caching and responsive WebP
+    Cache-Control, GZip, long-lived S3 caching, and responsive WebP
     srcset ladders that cut image payloads.<br />
     </li>
     <li>Added geo-aware features with GeoDjango/PostGIS: concerts
@@ -183,7 +188,7 @@
     </li>
     <li>Extended the Django admin into an operations console —
     application intake and approval flows, duplicate merging, forced
-    re-syncs and one-click platform actions.<br />
+    re-syncs, and one-click platform actions.<br />
     </li>
     <li>Hardened operations: Sentry, a pytest suite in CI, ruff and
     pre-commit, multi-stage Docker images, Terraform-provisioned AWS,
