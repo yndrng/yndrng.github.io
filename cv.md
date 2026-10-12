@@ -98,10 +98,11 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Par
 
 ---
 
-## <a href="https://klik.music" target="_blank">KLIK</a> — Swiss Army Man / Pet Project 
+## <a href="https://klik.music" target="_blank">KLIK</a> — Technical Director / Pet Project 
 *Online music media*  
 **Feb 2024 – ongoing**
 
+- Lightly coordinate a team of developers: aligning priorities, reviewing work, and keeping delivery on track alongside hands-on engineering.  
 - Launched and run the public site end-to-end — a Django REST API plus headless Wagtail CMS serving artists, releases, concerts, and editorial content.  
 - Designed a three-layer domain model (canonical catalog / per-platform integration / CMS pages) that keeps streaming data, editorial truth, and content decoupled.  
 - Built a pluggable platform-adapter layer with declarative capability flags — Spotify as source of truth, Yandex Music link-only; adding a platform needs no dispatch or persistence changes.  
