@@ -75,9 +75,11 @@ Music overall: <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vin
 - Fixed production defects in live customer communications: duplicate sends, incorrect dates, and messages that should have been suppressed.
 - Added operator preview (dependent fields, past properties, render before send) and shared message context across brands so the same communication does not fork per market.
 - Prepared handover documentation for client teams, documenting potential issues and recommended resolutions.
+- Used Claude Code extensively in daily delivery: custom skills, hooks, and plugins, plus other AI-assisted development best practices.
+- Streamlined handing tasks over to internal review with Slack Workflows, making the handoff quicker and more consistent for the team.
 
 **Stack:**
-Python, Django, pytest
+Python, Django (w. templates), pytest, Claude Code, Slack Workflows
 
 ## Fermata — Software Engineer  
 *AI in Agriculture*  
