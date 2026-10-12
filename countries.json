@@ -51,6 +51,11 @@
       { "name": "Bruges", "lat": 51.2093, "lon": 3.2247 }
     ] },
 
+  { "code": "NL", "name": "Netherlands",
+    "cities": [
+      { "name": "Amsterdam", "lat": 52.37403, "lon": 4.88969 }
+    ] },
+
   { "code": "IT", "name": "Italy",
     "cities": ["Rome", "Bologna"] },
 
