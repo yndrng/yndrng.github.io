@@ -102,20 +102,20 @@ Python, asyncio, MongoDB, RabbitMQ, FastAPI, Slack API, AWS (S3, CloudFront, Par
 *Online music media*  
 **Feb 2024 – ongoing**
 
-- Lightly coordinate a team of developers: aligning priorities, reviewing work, and keeping delivery on track alongside hands-on engineering.  
-- Launched and run the public site end-to-end — a Django REST API plus headless Wagtail CMS serving artists, releases, concerts, and editorial content.  
-- Designed a three-layer domain model (canonical catalog / per-platform integration / CMS pages) that keeps streaming data, editorial truth, and content decoupled.  
-- Built a pluggable platform-adapter layer with declarative capability flags — Spotify as source of truth, Yandex Music link-only; adding a platform needs no dispatch or persistence changes.  
-- Replaced brittle HTML scraping with resilient async API clients: httpx, TOTP-based Spotify auth (incl. a token-refresh race fix), retries, a shared proxy pool, and anti-abuse handling.  
-- Built an event-driven serverless pipeline on AWS: EventBridge schedules → Lambda fan-out → SQS, with container-image Lambdas sharing the Django codebase, partial-batch failure reporting, and DLQ redrive.  
-- Implemented rate-limited cross-platform link syndication (Odesli) as a scheduled drainer with a daily budget counter and a 30-day refresh window, staying inside a ~2 req/min limit.  
+- Coordinated a team of developers with a light touch, keeping priorities aligned and delivery on track alongside hands-on engineering.  
+- Launched the public-facing website: a Django REST API with a headless Wagtail CMS serving artists, releases, concerts, and editorial content.  
+- Designed a three-layer domain model (canonical catalog, per-platform integration, CMS pages) to keep streaming data, editorial content, and pages decoupled.  
+- Built a pluggable platform-adapter layer with capability flags for Spotify and Yandex Music, so adding a new platform requires no changes to existing code.  
+- Replaced HTML scraping with resilient async API clients (httpx) featuring retries, a shared proxy pool, and TOTP-based Spotify authentication.  
+- Built an event-driven serverless pipeline on AWS (EventBridge, Lambda, SQS) for scheduled data harvesting, with partial-batch failure handling and DLQ redrive.  
+- Implemented rate-limited cross-platform link syndication via Odesli, running as a scheduled job within a daily request budget.  
 - Migrated data storage from Google Sheets to a Django REST API on PostgreSQL, and infrastructure from DigitalOcean to AWS: backend on ECS Fargate, frontend on CloudFront.  
-- Cut API latency and cost: eliminated N+1 queries, added hot-path indexes and pruned redundant ones, moved artist leaderboards onto a concurrently-refreshed materialized view behind a debounced refresh lock.  
-- Made read paths CDN-cacheable — ETag/304 handling, Cache-Control, GZip, long-lived S3 caching, and responsive WebP srcset ladders that cut image payloads.  
-- Added geo-aware features with GeoDjango/PostGIS: concerts filtered by viewer country and region-specific catalog rules.  
-- Built the editorial CMS on headless Wagtail: custom StreamField blocks, OEmbed embeds, a custom image model with automatic WebP conversion, and multilingual content.  
-- Extended the Django admin into an operations console — application intake and approval flows, duplicate merging, forced re-syncs, and one-click platform actions.  
-- Hardened operations: Sentry, a pytest suite in CI, ruff and pre-commit, multi-stage Docker images, Terraform-provisioned AWS, and GitHub Actions deploying ECS and every Lambda.
+- Optimized API performance and cost: eliminated N+1 queries, added indexes, and moved leaderboards onto a materialized view.  
+- Made read paths CDN-cacheable with ETag/304, Cache-Control, GZip, and responsive WebP images.  
+- Added geo-aware features with GeoDjango/PostGIS, filtering concerts by viewer country and region.  
+- Set up the editorial CMS on headless Wagtail with custom StreamField blocks, OEmbed embeds, and multilingual content.  
+- Extended the Django admin into an operations console for application approvals, duplicate merging, and forced re-syncs.  
+- Built CI/CD pipelines (GitHub Actions) for automated testing and deployments, and provisioned AWS with Terraform for versioned, reproducible infrastructure; added Sentry, pytest, ruff, and pre-commit.  
 
 **Stack:**  
 Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS, GeoDjango, asyncio/httpx, Gunicorn + gevent, Pillow, AWS (ECS Fargate, Lambda, SQS, EventBridge, RDS, S3, CloudFront, ECR), Terraform, Docker, GitHub Actions, pytest, ruff, Sentry, uv, Spotify / Yandex Music / Odesli APIs, Google Sheets, DigitalOcean Droplets.

@@ -147,63 +147,58 @@
     <p><em>Online music media</em><br />
     <strong>Feb 2024 – ongoing</strong></p>
     <ul>
-    <li>Lightly coordinate a team of developers: aligning priorities,
-    reviewing work, and keeping delivery on track alongside hands-on
+    <li>Coordinated a team of developers with a light touch, keeping
+    priorities aligned and delivery on track alongside hands-on
     engineering.<br />
     </li>
-    <li>Launched and run the public site end-to-end — a Django REST API
-    plus headless Wagtail CMS serving artists, releases, concerts, and
+    <li>Launched the public-facing website: a Django REST API with a
+    headless Wagtail CMS serving artists, releases, concerts, and
     editorial content.<br />
     </li>
-    <li>Designed a three-layer domain model (canonical catalog /
-    per-platform integration / CMS pages) that keeps streaming data,
-    editorial truth, and content decoupled.<br />
+    <li>Designed a three-layer domain model (canonical catalog,
+    per-platform integration, CMS pages) to keep streaming data,
+    editorial content, and pages decoupled.<br />
     </li>
-    <li>Built a pluggable platform-adapter layer with declarative
-    capability flags — Spotify as source of truth, Yandex Music
-    link-only; adding a platform needs no dispatch or persistence
-    changes.<br />
+    <li>Built a pluggable platform-adapter layer with capability flags
+    for Spotify and Yandex Music, so adding a new platform requires no
+    changes to existing code.<br />
     </li>
-    <li>Replaced brittle HTML scraping with resilient async API clients:
-    httpx, TOTP-based Spotify auth (incl. a token-refresh race fix),
-    retries, a shared proxy pool, and anti-abuse handling.<br />
+    <li>Replaced HTML scraping with resilient async API clients (httpx)
+    featuring retries, a shared proxy pool, and TOTP-based Spotify
+    authentication.<br />
     </li>
-    <li>Built an event-driven serverless pipeline on AWS: EventBridge
-    schedules → Lambda fan-out → SQS, with container-image Lambdas
-    sharing the Django codebase, partial-batch failure reporting, and
-    DLQ redrive.<br />
+    <li>Built an event-driven serverless pipeline on AWS (EventBridge,
+    Lambda, SQS) for scheduled data harvesting, with partial-batch
+    failure handling and DLQ redrive.<br />
     </li>
-    <li>Implemented rate-limited cross-platform link syndication
-    (Odesli) as a scheduled drainer with a daily budget counter and a
-    30-day refresh window, staying inside a ~2 req/min limit.<br />
+    <li>Implemented rate-limited cross-platform link syndication via
+    Odesli, running as a scheduled job within a daily request
+    budget.<br />
     </li>
     <li>Migrated data storage from Google Sheets to a Django REST API on
     PostgreSQL, and infrastructure from DigitalOcean to AWS: backend on
     ECS Fargate, frontend on CloudFront.<br />
     </li>
-    <li>Cut API latency and cost: eliminated N+1 queries, added hot-path
-    indexes and pruned redundant ones, moved artist leaderboards onto a
-    concurrently-refreshed materialized view behind a debounced refresh
-    lock.<br />
+    <li>Optimized API performance and cost: eliminated N+1 queries,
+    added indexes, and moved leaderboards onto a materialized
+    view.<br />
     </li>
-    <li>Made read paths CDN-cacheable — ETag/304 handling,
-    Cache-Control, GZip, long-lived S3 caching, and responsive WebP
-    srcset ladders that cut image payloads.<br />
+    <li>Made read paths CDN-cacheable with ETag/304, Cache-Control,
+    GZip, and responsive WebP images.<br />
     </li>
-    <li>Added geo-aware features with GeoDjango/PostGIS: concerts
-    filtered by viewer country and region-specific catalog rules.<br />
+    <li>Added geo-aware features with GeoDjango/PostGIS, filtering
+    concerts by viewer country and region.<br />
     </li>
-    <li>Built the editorial CMS on headless Wagtail: custom StreamField
-    blocks, OEmbed embeds, a custom image model with automatic WebP
-    conversion, and multilingual content.<br />
+    <li>Set up the editorial CMS on headless Wagtail with custom
+    StreamField blocks, OEmbed embeds, and multilingual content.<br />
     </li>
-    <li>Extended the Django admin into an operations console —
-    application intake and approval flows, duplicate merging, forced
-    re-syncs, and one-click platform actions.<br />
+    <li>Extended the Django admin into an operations console for
+    application approvals, duplicate merging, and forced re-syncs.<br />
     </li>
-    <li>Hardened operations: Sentry, a pytest suite in CI, ruff and
-    pre-commit, multi-stage Docker images, Terraform-provisioned AWS,
-    and GitHub Actions deploying ECS and every Lambda.</li>
+    <li>Built CI/CD pipelines (GitHub Actions) for automated testing and
+    deployments, and provisioned AWS with Terraform for versioned,
+    reproducible infrastructure; added Sentry, pytest, ruff, and
+    pre-commit.</li>
     </ul>
     <p><strong>Stack:</strong><br />
     Python, Django, DRF, Wagtail (headless CMS), PostgreSQL/PostGIS,
