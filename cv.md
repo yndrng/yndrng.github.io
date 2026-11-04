@@ -1,11 +1,11 @@
 ---
-title: Aliaksandr (Alex/Sasha) Babaren
+title: Aliaksandr Babaren
 ---
 
 *Software Engineer / Backend Developer* living in *Warsaw, Poland*.
 
 <div id="webaddress">
-  <a href="mailto:sasha@klik.music">Email</a> |
+  <a href="mailto:a.babaren.work@proton.me">Email</a> |
   <a href="https://www.linkedin.com/in/yndrng" target="_blank">LinkedIn</a> |
   <a href="https://github.com/yndrng" target="_blank">GitHub</a>
 </div>
@@ -50,7 +50,7 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 
 ### Communication
 
-**English** – B2+.  
+**English** – C1.  
 **Russian** – Native.  
 **Belarusian** – Native.  
 **Polish** – B1.
@@ -58,7 +58,7 @@ Dedicated Software Engineer with extensive experience in designing, developing, 
 ---
 
 ### Interests
-Music overall: <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vinyl collecting</a>, <a href="https://yndrng.github.io/gigs.html" target="_blank">gigs</a>, instruments (guitar, vocals, bass, someday - piano and drums), history. 
+Music overall: <a href="https://roundnsquare.club/sanyafyl/" target="_blank">vinyl collecting</a>, <a href="https://yndrng.github.io/gigs.html" target="_blank">gigs</a>, instruments (guitar, vocals, bass, someday - piano and drums), history.
 
 # Ongoing
 
@@ -162,7 +162,7 @@ Python, FastAPI, Stripe, async SQLAlchemy, PostgreSQL, AWS (RDS, SQS), ShipCompl
 
 ---
 
-## Innowise Group — Middle Software Engineer / Manager
+## Innowise Group — Middle Software Engineer
 *Minsk, Belarus / Warsaw, Poland*  
 **Jan 2022 – Mar 2023**
 
