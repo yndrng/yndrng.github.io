@@ -1,7 +1,6 @@
 // Pan / zoom / tooltip / click-to-focus layer for the world map in travel.html.
-// Progressive enhancement only: travel.py already emits a fully coloured, correctly
-// labelled SVG (with native <title> tooltips), so this script degrades to nothing if
-// it fails to run — the map still works, it just can't be panned or zoomed.
+// travel.py emits the grey base map; travel-data.js colours it from the life-app API.
+// If this script fails, the map still shows, it just can't be panned or zoomed.
 (function () {
   "use strict";
 
@@ -295,6 +294,9 @@
   );
 
   svg.addEventListener("blur", hideTip, true);
+
+  // travel-data.js adds the city dots after its fetch resolves; let it re-apply the zoom sizing.
+  window.worldMapRefresh = applyBox;
 
   applyBox();
 })();

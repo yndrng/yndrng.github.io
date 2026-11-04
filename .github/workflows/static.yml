@@ -31,14 +31,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v5
-      # gigs.csv / countries.json can be edited by the life-app bot via the GitHub API, so
-      # rebuild the data-driven pages here and commit them back (GITHUB_TOKEN pushes don't
+      # Gigs and travel data come from the life-app API at runtime; this only rebuilds the page
+      # shells (base map from world.geojson) and commits them back (GITHUB_TOKEN pushes don't
       # retrigger workflows, so there's no loop). CV/PDF are still compiled locally.
       - name: Install pandoc
         run: sudo apt-get update -qq && sudo apt-get install -y -qq pandoc
       - name: Compile gigs and travel pages
         run: |
-          python3 gigs.py
           pandoc -f gfm --standalone --template template.html --metadata gigspage=true gigs.md -o gigs.html
           python3 travel.py
           pandoc -f gfm --standalone --template template.html --metadata travelpage=true travel.md -o travel.html
