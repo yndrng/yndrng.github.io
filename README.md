@@ -24,11 +24,11 @@ Append a row to `gigs.csv` (any order — the page sorts by date, newest first) 
 `./compile.sh`:
 
 ```csv
-artist,date,venue,location
-Nine Inch Nails,2024-06-14,Progresja,"Warsaw, Poland"
+artist,date,venue,city,country
+Nine Inch Nails,2024-06-14,Progresja,Warsaw,PL
 ```
 
-Dates may be written as `YYYY-MM-DD`, `DD.MM.YYYY`, or `DD/MM/YYYY`; they render as `14 Jun 2024`. `gigs.py` turns the CSV into
+Dates may be written as `YYYY-MM-DD`, `DD.MM.YYYY`, or `DD/MM/YYYY`; they render as `14 Jun 2024`. For multi-day events write a range with spaces around the dash, e.g. `28.08.2026 - 30.08.2026` (renders as `28–30 Aug 2026`; sorted by start date). `gigs.py` turns the CSV into
 `gigs.md` (an intermediate file, git-ignored), which pandoc renders into `gigs.html`.
 
 ## Adding a country or city to the map
