@@ -7,7 +7,6 @@ echo "compiling cv page..."
 pandoc --standalone --template template.html --metadata cvpage=true cv.md -o cv.html
 
 echo "compiling gigs page..."
-python3 gigs.py
 pandoc -f gfm --standalone --template template.html --metadata gigspage=true gigs.md -o gigs.html
 
 echo "compiling travel page..."

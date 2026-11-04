@@ -6,7 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>$title$</title>
-$if(travelpage)$    <script src="map.js" defer></script>
+$if(travelpage)$    <script src="site-api.js" defer></script>
+    <script src="travel-data.js" defer></script>
+    <script src="map.js" defer></script>
+$endif$$if(gigspage)$    <script src="site-api.js" defer></script>
+    <script src="gigs.js" defer></script>
 $endif$  </head>
   <body>
     <nav class="tabs">
